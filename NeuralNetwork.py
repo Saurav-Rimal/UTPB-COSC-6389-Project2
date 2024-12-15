@@ -307,10 +307,10 @@ class NeuralNetwork:
     def visualize_error(self, canvas_frame):
         if hasattr(self, 'error_history') and self.error_history:
             fig, ax = plt.subplots(figsize=(5, 3))
-            ax.plot(range(1, len(self.error_history) + 1), self.error_history, label="Training Loss")
+            ax.plot(range(1, len(self.error_history) + 1), self.error_history, label="Loss")
             ax.set_xlabel("Epoch")
             ax.set_ylabel("Loss")
-            ax.set_title("Training Loss Over Epoch")
+            ax.set_title("Graph: Loss Over Epoch")
             ax.legend()
             ax.grid(True)
             ax.set_ylim(bottom=0)
